@@ -85,7 +85,9 @@ class Person
             friend.happiness += 1
             return "blah blah sun blah rain"
         end
-
         
+        if topic != "weather" and topic != "politics"
+            return "blah blah blah blah blah"
+        end
     end
 end
