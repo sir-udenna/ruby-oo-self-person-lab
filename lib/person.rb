@@ -1,40 +1,45 @@
 # your code goes her
 require 'pry'
 class Person
+    attr_accessor :bank_account
+    attr_reader :name #getter 
+    attr_writer :happiness, :hygiene #setter
+
     def initialize(name)
         @name = name
-        @balance = 25
+        @bank_account = 25
         @happiness = 8
         @hygiene = 8
     end
 
-    def name
-        @name
-    end
+    # line 5 (long way to get name)
+    # def name
+    #     @name
+    # end
 
-    def bank_account
-        @balance
-    end
+    # def bank_account
+    #     @balance
+    # end
 
-    def bank_account=(balance)
-        @balance = balance
-    end
+    # def bank_account=(balance)
+    #     @balance = balance
+    # end
 
     def happiness
         @happiness.clamp(0,10)
     end
 
-    def happiness=(happiness)
-        @happiness = happiness
-    end
+    # def happiness=(happiness)
+    #     @happiness = happiness
+    # end
 
     def hygiene
         @hygiene.clamp(0,10)
     end
 
-    def hygiene=(hygiene)
-        @hygiene = hygiene
-    end
+    # def hygiene=(hygiene)
+    #     @hygiene = hygiene
+    # end
 
     def happy?
         @happiness > 7
@@ -45,7 +50,7 @@ class Person
     end
 
     def get_paid(salary)
-        @balance += salary
+        @bank_account += salary
         "all about the benjamins"
     end
 
